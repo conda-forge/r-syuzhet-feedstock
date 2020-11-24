@@ -5,11 +5,9 @@ Home: https://github.com/mjockers/syuzhet
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-syuzhet-feedstock/blob/master/LICENSE.txt)
 
 Summary: Extracts sentiment and sentiment-derived plot arcs from text using a variety of sentiment dictionaries conveniently packaged for consumption by R users.  Implemented dictionaries include "syuzhet" (default) developed in the Nebraska Literary Lab "afinn" developed by Finn {\AA}rup Nielsen, "bing" developed by Minqing Hu and Bing Liu, and "nrc" developed by Mohammad, Saif M. and Turney, Peter D. Applicable references are available in README.md and in the documentation for the "get_sentiment" function.  The package also provides a hack for implementing Stanford's coreNLP sentiment parser. The package provides several methods for plot arc normalization.
-
-
 
 Current build status
 ====================
