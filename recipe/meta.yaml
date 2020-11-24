@@ -1,4 +1,4 @@
-{% set version = '1.0.4' %}
+{% set version = "1.0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/syuzhet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/syuzhet/syuzhet_{{ version }}.tar.gz
-  sha256: f15927958d6bb6e3226705d5188f90516dac4c68a09429f0fc079e7d34cdc471
+  sha256: fbcb68d060bea5452c4ac60b490c8af039fec6e7d3406505e25100be1a662c9a
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1003
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,16 +49,11 @@ test:
 about:
   home: https://github.com/mjockers/syuzhet
   license: GPL-3
-  summary: Extracts sentiment and sentiment-derived plot arcs from text using a variety of sentiment
-    dictionaries conveniently packaged for consumption by R users.  Implemented dictionaries
-    include "syuzhet" (default) developed in the Nebraska Literary Lab "afinn" developed
-    by Finn {\AA}rup Nielsen, "bing" developed by Minqing Hu and Bing Liu, and "nrc"
-    developed by Mohammad, Saif M. and Turney, Peter D. Applicable references are available
-    in README.md and in the documentation for the "get_sentiment" function.  The package
-    also provides a hack for implementing Stanford's coreNLP sentiment parser. The package
-    provides several methods for plot arc normalization.
+  summary: Extracts sentiment and sentiment-derived plot arcs from text using a variety of sentiment dictionaries conveniently packaged for consumption by R users.  Implemented dictionaries include "syuzhet" (default) developed in the Nebraska Literary Lab "afinn" developed by Finn {\AA}rup Nielsen, "bing" developed by Minqing
+    Hu and Bing Liu, and "nrc" developed by Mohammad, Saif M. and Turney, Peter D. Applicable references are available in README.md and in the documentation for the "get_sentiment" function.  The package also provides a hack for implementing Stanford's coreNLP sentiment parser. The package provides several methods for plot
+    arc normalization.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
